@@ -3,7 +3,7 @@
 FridgeManager
 =
 
-<u><font size="3"> **Beskrivelse av prosjektets strktur**</font></u>   
+<u><font size="3"> **Beskrivelse av prosjektets struktur**</font></u>   
 
 Dette prosjektet inneholder Java-kode og tester til disse. Det er delt opp i to separate moduler: "core" og "fxui".   
 <u>**Core:**</u>  
