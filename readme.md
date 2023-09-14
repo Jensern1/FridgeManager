@@ -32,23 +32,3 @@ mvn javafx:run
 ```
 Legg merke til at `mvn install` både installerer Maven og kjører alle tester og kvalitetssjekker. 
 
-
-<u><font size="3"> **Gruppens arbeidsmetode**</font></u>  
-
-<u>**Arbeidsvaner**</u>: Vi bruker Gitlab flittig for å holde styr på arbeidsfordeling og nåværende status i prosjektet. For hver nye arbeidsoppgave oppretter vi en «issue», og merker denne med riktig label, som f.eks. «doing». Vi holder styr på alle gjeldende issues vha. «boardet» i sidemenyen på Gitlab. Dette gjør at vi enkelt kan endre statusen til ulike utviklingsoppgaver. 
-Vi har laget flere hensiktsmessige labels for å kunne holde styr på utviklingsoppgavene, som f.eks. «importance:high», «importance:medium» og «importance:low» for å kunne gi ulike oppgaver ulik prioritet. Vi knytter også utviklingsoppgaver til ulike moduler gjennom merkelapper av typen «feat/UI», «feat/testing», «feat/IO» eller «feat/core». Dette gjør det enklere å skille mellom forskjellige deler av prosjektet.  
-
-Ved utvikling av nye features oppretter vi en ny branch ved navn «feat/navnpåfeature». Dette for å unngå konflikter i master, ettersom det er viktig at denne fungerer til enhver tid. Ved ferdigstillelse av feature merger vi først alle brancher utenom master inn i en, sjekker at denne funker, for så å merge denne inn i master. På denne måten minimerer vi risikoen for at master ikke vil fungere etter merging.  
-
-<u>**Arbeidsflyt:**</u> Gruppen møtes tre ganger i uken slik som beskrevet i gruppekontrakten, og møtene følger stort sett samme struktur. Vi avholder et kort innledende møte i starten av økten for å få oversikt over hva gruppemedlemmene har jobbet med på egenhånd siden sist møte. Deretter diskuterer vi hva som må gjøres den aktuelle økten, og fordeler arbeidsoppgaver basert på det vi kommer frem til.  
-Den resterende møtetiden på individuell/parvis jobbing og løpende spørsmål/diskusjon innad i gruppen om man skulle lure på noe eller ønsker å oppklare noe tilknyttet en oppgave. På slutten av møtet diskuterer vi kort hva vi har fått til i dag, og hva som må gjøres innen neste møte blir avholdt. Ved arbeid utenfor møtetider benytter vi oss av Messenger for kommunikasjon.  
-
-<u>**Kodekvalitet:**</u> For å sikre at koden vår holder god kvalitet rådfører vi oss ofte med resten av gruppen om egen kode. Ved å få en annen på gruppen til å lese gjennom egen kode før commits sikrer vi at vi unngår åpenbare feiltrinn som kan være vanskelige å oppdage selv. Gruppen har også et stort fokus på å skrive ryddig og lesbar kode, noe som har ført til flere oppryddinger i f.eks. Controller og tester. Dette gjør det betydelig lettere for gruppens medlemmer å få oversikt over andres kode, noe som effektiviserer utviklingsarbeidet.  
-
-I tillegg mener vi det er viktig å sjekke at koden vår faktisk fungerer før vi sier oss ferdig med den. Derfor flytter vi alle nye features til «intest» før de blir plassert i «done». Dette for å sikre at all logikk blir ferdigtestet før vi sier oss ferdig med den aktuelle featuren. Målet for testingen av prosjektet er å teste så å si alle metoder som inneholder logikk utenom helt ordinære getter- og setter-metoder. Dette inkluderer ikke metoder som kun oppdaterer det visuelle, altså f.eks. metoden startup() i Controlleren som setter riktig starttilstand for alle FXML-elementer ved oppstart av appen. 
-
-Checkstyle, Spotbugs og JaCoCo er implementert som plugins i prosjektets POM-fil  for å sikre god kodekvalitet.
-Vi benytter oss for Checkstyle for sjekk av formatering. Hensikten med dette er å sørge for ryddig kode. 
-Vi bruker også Spotbugs for å sikre oss mot kode som kan føre til uventet programkrasj, i tillegg til å sørge for at programmet har et hensiktsmessig design. 
-Vi bruker JaCoCo for å sørge for at prosjektet har høy testdekningsgrad. 
-For å gjennomføre en sjekk kan man bruke kommandoen `mvn verify` i terminalen. 
